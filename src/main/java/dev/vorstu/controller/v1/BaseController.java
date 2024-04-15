@@ -53,6 +53,7 @@ public class BaseController {
     public void deleteStudent(@PathVariable("id") Long id){
         studentRepository.deleteById(id);
     }
+
     @GetMapping(value =  "students/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
     public Student getStudentById(@PathVariable("id") Long id){
         return studentRepository.findById(id)
